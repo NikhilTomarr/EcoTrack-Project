@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack - SDG 13 Climate Action</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>EcoTrack</h1>
+        <p>Sustainable Development Goal 13: Climate Action</p>
+    </header>
+
+    <main class="container">
+        <!-- Dashboard Section -->
+        <section class="dashboard">
+            <h2>EcoTrack Dashboard</h2>
+            <div class="card-container">
+                <div class="card">
+                    <p class="card-title">Total Emissions This Week</p>
+                    <h3 class="card-value" id="total-emissions">124 kg</h3>
+                    <p class="card-subtext alert">▲ 5% from last week</p>
+                </div>
+                <div class="card">
+                    <p class="card-title">Biggest Contributor</p>
+                    <h3 class="card-value" id="biggest-contributor">Transport</h3>
+                    <p class="card-subtext">60% of total</p>
+                </div>
+                <div class="card">
+                    <p class="card-title">Trees Needed</p>
+                    <h3 class="card-value" id="trees-needed">6 Trees</h3>
+                    <p class="card-subtext success">To offset this week</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activity Logger Form Section -->
+        <section class="logger">
+            <h2>Log Daily Activity</h2>
+            <form id="activity-form">
+                <div class="form-group">
+                    <label for="transport-mode">Transportation Mode:</label>
+                    <select id="transport-mode" required>
+                        <option value="car">Car (Gasoline)</option>
+                        <option value="bus">Public Transport (Bus/Train)</option>
+                        <option value="bike">Bicycle / Walking (Zero Emission)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="distance">Distance Traveled (km):</label>
+                    <input type="number" id="distance" min="1" required placeholder="e.g., 25">
+                </div>
+                
+                <button type="submit" class="btn-submit">Calculate & Log</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
